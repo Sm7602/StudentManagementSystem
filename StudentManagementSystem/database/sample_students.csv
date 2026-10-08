@@ -1,0 +1,9 @@
+first_name,last_name,email,date_of_birth,department,gpa,enrollment_date
+Ishaan,Kapoor,ishaan.kapoor@example.com,2004-03-15,Computer Science,3.45,2022-08-01
+Diya,Malhotra,diya.malhotra@example.com,2004-07-22,Mathematics,3.88,2022-08-01
+Kabir,Chopra,kabir.chopra@example.com,2003-10-09,Physics,3.12,2022-08-01
+Aditi,Banerjee,aditi.banerjee@example.com,2004-01-18,Business,3.67,2022-08-01
+Siddharth,Rao,siddharth.rao@example.com,2003-05-27,Computer Science,2.98,2022-08-01
+Nisha,Kulkarni,nisha.kulkarni@example.com,2005-09-03,Mathematics,,2023-08-01
+Aryan,Desai,aryan.desai@example.com,2003-12-11,Physics,3.74,2022-08-01
+Tanvi,Bhatt,tanvi.bhatt@example.com,2004-04-29,Business,3.31,2022-08-01

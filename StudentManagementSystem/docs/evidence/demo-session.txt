@@ -1,0 +1,508 @@
+# Interactive session covering all 10 menu options, started on a server WITHOUT the database
+# Captured: 2026-10-08 20:14 UTC | OS: Ubuntu 24.04.5 LTS | Java: openjdk version "21.0.12.1" 2026-08-18 | MySQL server: 8.0.46-0ubuntu0.24.04.4
+# Driver: lib/mysql-connector-j-9.7.0.jar | Pool: lib/commons-dbcp2-2.10.0.jar | Time zones: JVM Asia/Calcutta (UTC+05:30, used in file names and logs), MySQL server UTC
+# This file is unedited program output.
+
+# Input: docs/evidence/demo-input.txt (typed values are echoed because of -Dsms.echoInput=true)
+$ JAVA_OPTS="-Dsms.echoInput=true" ./run.sh < docs/evidence/demo-input.txt
+
+==========================================================
+     STUDENT MANAGEMENT SYSTEM  (Java JDBC + MySQL)
+==========================================================
+WARNING: The database does not exist yet - choose option 1 (Initialize Database) [MySQL: Unknown database 'student_management' | SQLState 42000, error 1049]
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 1
+
+--- Initialize Database ---
+Creates the database (if missing), tables, constraints, indexes and stored procedures.
+Existing data is kept.
+Load sample data if the database is empty? (y/n): y
+  [OK] Database 'student_management' is ready (utf8mb4)
+  [OK] Tables, constraints and indexes created/verified (schema.sql, 3 statements)
+  [OK] Stored procedures GetStudentsByDepartment and GetDatabaseStatistics created (procedures.sql, 4 statements)
+  [OK] Sample data loaded in one transaction (10 students, 6 courses, 16 enrollments)
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 3
+
+--- All Students ---
+ID    Name                     Email                            Department         GPA   Born       Enrolled  
+----------------------------------------------------------------------------------------------------------
+1     Aarav Sharma             aarav.sharma@example.com         Computer Science   3.75  2003-04-12 2021-08-02
+2     Priya Patel              priya.patel@example.com          Computer Science   3.92  2002-11-23 2020-08-03
+3     Rohan Mehta              rohan.mehta@example.com          Mathematics        3.40  2003-07-05 2021-08-02
+4     Ananya Iyer              ananya.iyer@example.com          Physics            3.65  2004-01-30 2022-08-01
+5     Vikram Singh             vikram.singh@example.com         Business           2.95  2002-09-17 2020-08-03
+6     Sneha Reddy              sneha.reddy@example.com          Mathematics        3.80  2003-03-08 2021-08-02
+7     Arjun Nair               arjun.nair@example.com           Computer Science   3.10  2004-06-21 2022-08-01
+8     Kavya Gupta              kavya.gupta@example.com          Physics            3.55  2003-12-02 2021-08-02
+9     Rahul Verma              rahul.verma@example.com          Business           3.20  2002-05-14 2020-08-03
+10    Meera Joshi              meera.joshi@example.com          Computer Science   -     2005-02-26 2023-08-01
+10 student(s)
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 2
+
+--- Add New Student ---
+First name: Ishita
+Last name: Sen
+Email: ishita.sen@
+  Email 'ishita.sen@' is not a valid e-mail address
+Email: Ishita.Sen@Example.com
+Date of birth (yyyy-MM-dd): 14-09-2004
+  '14-09-2004' is not a valid date - use the format yyyy-MM-dd, e.g. 2004-03-15.
+Date of birth (yyyy-MM-dd): 2004-09-14
+Department: Computer Science
+GPA 0.00-4.00 (Enter = no GPA yet): 3.65
+Enrollment date (yyyy-MM-dd, Enter = today): 2023-08-01
+Available courses:
+  BA101   Principles of Management           3 credits  (Business)
+  CS101   Introduction to Programming        4 credits  (Computer Science)
+  CS201   Data Structures and Algorithms     4 credits  (Computer Science)
+  CS301   Database Management Systems        3 credits  (Computer Science)
+  MA101   Calculus I                         4 credits  (Mathematics)
+  PH101   Physics I: Mechanics               4 credits  (Physics)
+Enroll in courses now? Course codes separated by commas (Enter = skip): CS101, CS201
+[OK] Student added with ID 11 and enrolled in 2 course(s) - committed as one transaction
+  ID              : 11
+  Name            : Ishita Sen
+  Email           : ishita.sen@example.com
+  Date of birth   : 2004-09-14
+  Department      : Computer Science
+  GPA             : 3.65
+  Enrollment date : 2023-08-01
+  Created         : 2026-10-08 20:14:46
+  Last updated    : 2026-10-08 20:14:46
+  Courses         :
+      CS101   Introduction to Programming        enrolled 2023-08-01  grade in progress
+      CS201   Data Structures and Algorithms     enrolled 2023-08-01  grade in progress
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 4
+
+--- Search Students ---
+1. By student ID
+2. By name/email, department and/or minimum GPA
+Choose (1-2): 1
+Student ID: 11
+  ID              : 11
+  Name            : Ishita Sen
+  Email           : ishita.sen@example.com
+  Date of birth   : 2004-09-14
+  Department      : Computer Science
+  GPA             : 3.65
+  Enrollment date : 2023-08-01
+  Created         : 2026-10-08 20:14:46
+  Last updated    : 2026-10-08 20:14:46
+  Courses         :
+      CS101   Introduction to Programming        enrolled 2023-08-01  grade in progress
+      CS201   Data Structures and Algorithms     enrolled 2023-08-01  grade in progress
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 4
+
+--- Search Students ---
+1. By student ID
+2. By name/email, department and/or minimum GPA
+Choose (1-2): 2
+Leave a field empty to ignore it.
+Name or email contains: patel
+Department: 
+Minimum GPA: 
+ID    Name                     Email                            Department         GPA   Born       Enrolled  
+----------------------------------------------------------------------------------------------------------
+2     Priya Patel              priya.patel@example.com          Computer Science   3.92  2002-11-23 2020-08-03
+1 student(s) found
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 4
+
+--- Search Students ---
+1. By student ID
+2. By name/email, department and/or minimum GPA
+Choose (1-2): 2
+Leave a field empty to ignore it.
+Name or email contains: 
+Department: computer science
+Minimum GPA: 3.50
+ID    Name                     Email                            Department         GPA   Born       Enrolled  
+----------------------------------------------------------------------------------------------------------
+2     Priya Patel              priya.patel@example.com          Computer Science   3.92  2002-11-23 2020-08-03
+11    Ishita Sen               ishita.sen@example.com           Computer Science   3.65  2004-09-14 2023-08-01
+1     Aarav Sharma             aarav.sharma@example.com         Computer Science   3.75  2003-04-12 2021-08-02
+3 student(s) found
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 5
+
+--- Update Student ---
+Student ID to update: 11
+  ID              : 11
+  Name            : Ishita Sen
+  Email           : ishita.sen@example.com
+  Date of birth   : 2004-09-14
+  Department      : Computer Science
+  GPA             : 3.65
+  Enrollment date : 2023-08-01
+  Created         : 2026-10-08 20:14:46
+  Last updated    : 2026-10-08 20:14:46
+  Courses         :
+      CS101   Introduction to Programming        enrolled 2023-08-01  grade in progress
+      CS201   Data Structures and Algorithms     enrolled 2023-08-01  grade in progress
+Enter new values - press Enter to keep the current value shown in [brackets].
+First name [Ishita]: 
+Last name [Sen]: 
+Email [ishita.sen@example.com]: 
+Date of birth [2004-09-14]: 
+Department [Computer Science]: Mathematics
+GPA [3.65]: 3.72
+Enrollment date [2023-08-01]: 
+[OK] Student 11 updated
+  ID              : 11
+  Name            : Ishita Sen
+  Email           : ishita.sen@example.com
+  Date of birth   : 2004-09-14
+  Department      : Mathematics
+  GPA             : 3.72
+  Enrollment date : 2023-08-01
+  Created         : 2026-10-08 20:14:46
+  Last updated    : 2026-10-08 20:14:47
+  Courses         :
+      CS101   Introduction to Programming        enrolled 2023-08-01  grade in progress
+      CS201   Data Structures and Algorithms     enrolled 2023-08-01  grade in progress
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 2
+
+--- Add New Student ---
+First name: Rahul
+Last name: Kumar
+Email: rahul.kumar@example.com
+Date of birth (yyyy-MM-dd): 2003-02-11
+Department: Physics
+GPA 0.00-4.00 (Enter = no GPA yet): 
+Enrollment date (yyyy-MM-dd, Enter = today): 
+Available courses:
+  BA101   Principles of Management           3 credits  (Business)
+  CS101   Introduction to Programming        4 credits  (Computer Science)
+  CS201   Data Structures and Algorithms     4 credits  (Computer Science)
+  CS301   Database Management Systems        3 credits  (Computer Science)
+  MA101   Calculus I                         4 credits  (Mathematics)
+  PH101   Physics I: Mechanics               4 credits  (Physics)
+Enroll in courses now? Course codes separated by commas (Enter = skip): PH101, XX999
+Transaction rolled back - the student was NOT saved.
+Validation error: Unknown course code: XX999
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 2
+
+--- Add New Student ---
+First name: Aarav
+Last name: Sharma
+Email: aarav.sharma@example.com
+Date of birth (yyyy-MM-dd): 2003-04-12
+Department: Computer Science
+GPA 0.00-4.00 (Enter = no GPA yet): 3.75
+Enrollment date (yyyy-MM-dd, Enter = today): 2021-08-02
+Available courses:
+  BA101   Principles of Management           3 credits  (Business)
+  CS101   Introduction to Programming        4 credits  (Computer Science)
+  CS201   Data Structures and Algorithms     4 credits  (Computer Science)
+  CS301   Database Management Systems        3 credits  (Computer Science)
+  MA101   Calculus I                         4 credits  (Mathematics)
+  PH101   Physics I: Mechanics               4 credits  (Physics)
+Enroll in courses now? Course codes separated by commas (Enter = skip): 
+ERROR: A record with the same unique value already exists [MySQL: Duplicate entry 'aarav.sharma@example.com' for key 'students.uk_students_email' | SQLState 23000, error 1062]
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 6
+
+--- Delete Student ---
+Student ID to delete: 11
+  ID              : 11
+  Name            : Ishita Sen
+  Email           : ishita.sen@example.com
+  Date of birth   : 2004-09-14
+  Department      : Mathematics
+  GPA             : 3.72
+  Enrollment date : 2023-08-01
+  Created         : 2026-10-08 20:14:46
+  Last updated    : 2026-10-08 20:14:47
+  Courses         :
+      CS101   Introduction to Programming        enrolled 2023-08-01  grade in progress
+      CS201   Data Structures and Algorithms     enrolled 2023-08-01  grade in progress
+Delete this student and their 2 enrollment(s)? (y/n): y
+[OK] Student 11 deleted (2 enrollment(s) removed by ON DELETE CASCADE)
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 7
+
+--- Batch Operations ---
+1. Import students from a CSV file (batch insert, one transaction)
+2. Enroll several students in one course (batch insert, one transaction)
+3. Back to main menu
+Choose (1-3): 1
+CSV header must be: first_name,last_name,email,date_of_birth,department,gpa,enrollment_date
+CSV file [database/sample_students.csv]: 
+[OK] Batch committed: 8 student(s) inserted with addBatch()/executeBatch() in 6 ms
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 7
+
+--- Batch Operations ---
+1. Import students from a CSV file (batch insert, one transaction)
+2. Enroll several students in one course (batch insert, one transaction)
+3. Back to main menu
+Choose (1-3): 1
+CSV header must be: first_name,last_name,email,date_of_birth,department,gpa,enrollment_date
+CSV file [database/sample_students.csv]: 
+Batch failed - transaction rolled back, no students were imported.
+ERROR: A record with the same unique value already exists [MySQL: Duplicate entry 'ishaan.kapoor@example.com' for key 'students.uk_students_email' | SQLState 23000, error 1062]
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 7
+
+--- Batch Operations ---
+1. Import students from a CSV file (batch insert, one transaction)
+2. Enroll several students in one course (batch insert, one transaction)
+3. Back to main menu
+Choose (1-3): 2
+Available courses:
+  BA101   Principles of Management           3 credits  (Business)
+  CS101   Introduction to Programming        4 credits  (Computer Science)
+  CS201   Data Structures and Algorithms     4 credits  (Computer Science)
+  CS301   Database Management Systems        3 credits  (Computer Science)
+  MA101   Calculus I                         4 credits  (Mathematics)
+  PH101   Physics I: Mechanics               4 credits  (Physics)
+Course code: CS301
+Student IDs separated by commas: 14, 15, 16
+[OK] Batch committed: 3 enrollment(s) created for CS301
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 8
+
+--- Call Stored Procedure: GetStudentsByDepartment ---
+Departments: Business, Computer Science, Mathematics, Physics
+Department: Mathematics
+Executing {CALL GetStudentsByDepartment(?)} with ? = 'Mathematics'
+ID    Name                     Email                            Department         GPA   Born       Enrolled  
+----------------------------------------------------------------------------------------------------------
+19    Nisha Kulkarni           nisha.kulkarni@example.com       Mathematics        -     2005-09-03 2023-08-01
+15    Diya Malhotra            diya.malhotra@example.com        Mathematics        3.88  2004-07-22 2022-08-01
+3     Rohan Mehta              rohan.mehta@example.com          Mathematics        3.40  2003-07-05 2021-08-02
+6     Sneha Reddy              sneha.reddy@example.com          Mathematics        3.80  2003-03-08 2021-08-02
+4 student(s) returned by the stored procedure
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): 9
+
+--- Database Statistics ---
+Server: MySQL 8.0.46-0ubuntu0.24.04.4 (MySQL Connector/J 9.7.0)
+Database: student_management
+
+Record counts (stored procedure GetDatabaseStatistics, OUT parameters)
+  Students               18
+  Courses                6
+  Enrollments            19
+  Average GPA            3.47
+
+Students per department
+  Business                 4   average GPA 3.28
+  Computer Science         6   average GPA 3.44
+  Mathematics              4   average GPA 3.69
+  Physics                  4   average GPA 3.52
+
+Enrollments per course
+  BA101                    2
+  CS101                    5
+  CS201                    2
+  CS301                    4
+  MA101                    4
+  PH101                    2
+
+Connection pool (Apache Commons DBCP2)
+  Active connections     0
+  Idle connections       5
+  Min idle / Max idle    5 / 10
+  Max total              20
+  Max cached statements  100
+
+Indexes (information_schema.STATISTICS)
+  courses.PRIMARY (id) UNIQUE
+  courses.uk_courses_code (course_code) UNIQUE
+  student_courses.idx_student_courses_course (course_id)
+  student_courses.PRIMARY (student_id, course_id) UNIQUE
+  students.idx_students_department_gpa (department, gpa)
+  students.PRIMARY (id) UNIQUE
+  students.uk_students_email (email) UNIQUE
+
+Index check (EXPLAIN for department = 'Business'): access type ref, key idx_students_department_gpa
+
+Report generated in 30 ms (measured)
+
+========================= MAIN MENU =========================
+ 1. Initialize Database
+ 2. Add New Student
+ 3. View All Students
+ 4. Search Students
+ 5. Update Student
+ 6. Delete Student
+ 7. Batch Operations
+ 8. Call Stored Procedure
+ 9. Database Statistics
+10. Exit
+Enter your choice (1-10): abc
+  Please enter a number between 1 and 10.
+Enter your choice (1-10): 10
+Goodbye!

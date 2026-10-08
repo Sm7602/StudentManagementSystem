@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="112" skipped="0" failures="0" errors="0" time="7.25" hostname="vm" timestamp="2026-10-09T01:44:43">
+<properties>
+<property name="db.config" value="config/database-test.properties"/>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="/"/>
+<property name="http.nonProxyHosts" value="localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local"/>
+<property name="https.proxyHost" value="127.0.0.1"/>
+<property name="https.proxyPort" value="35941"/>
+<property name="java.class.path" value="out/classes:out/test-classes:lib/mysql-connector-j-9.7.0.jar:lib/commons-logging-1.3.0.jar:lib/commons-pool2-2.11.1.jar:lib/commons-dbcp2-2.10.0.jar:lib/test/junit-platform-console-standalone-1.10.1.jar"/>
+<property name="java.class.version" value="65.0"/>
+<property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="21.0.12.1+1-1-24.04.4-Ubuntu"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="21"/>
+<property name="java.vendor" value="Ubuntu"/>
+<property name="java.vendor.url" value="https://ubuntu.com/"/>
+<property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+<property name="java.version" value="21.0.12.1"/>
+<property name="java.version.date" value="2026-08-18"/>
+<property name="java.vm.compressedOopsMode" value="32-bit"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="21"/>
+<property name="java.vm.vendor" value="Ubuntu"/>
+<property name="java.vm.version" value="21.0.12.1+1-1-24.04.4-Ubuntu"/>
+<property name="javax.net.ssl.trustStore" value="/etc/ssl/certs/java/cacerts"/>
+<property name="javax.net.ssl.trustStoreType" value="JKS"/>
+<property name="jdk.debug" value="release"/>
+<property name="jdk.http.auth.proxying.disabledSchemes" value=""/>
+<property name="jdk.http.auth.tunneling.disabledSchemes" value=""/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="ANSI_X3.4-1968"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="6.18.44-fc-v80"/>
+<property name="path.separator" value=":"/>
+<property name="stderr.encoding" value="ANSI_X3.4-1968"/>
+<property name="stdout.encoding" value="ANSI_X3.4-1968"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher execute --scan-class-path out/test-classes --include-engine junit-jupiter --details tree --details-theme ascii --disable-banner --reports-dir out/test-reports --disable-ansi-colors"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="ANSI_X3.4-1968"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="/home/claude/StudentManagementSystem"/>
+<property name="user.home" value="/root"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="root"/>
+<property name="user.timezone" value="Asia/Calcutta"/>
+</properties>
+<testcase name="restoreRejectsAMissingFile()" classname="com.studentmanagement.util.BackupRecoveryTest" time="0.038">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.BackupRecoveryTest]/[method:restoreRejectsAMissingFile()]
+display-name: restoreRejectsAMissingFile()
+]]></system-out>
+</testcase>
+<testcase name="thePhysicalMySqlSessionIsReusedAfterClose()" classname="com.studentmanagement.config.DatabaseConfigTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseConfigTest]/[method:thePhysicalMySqlSessionIsReusedAfterClose()]
+display-name: thePhysicalMySqlSessionIsReusedAfterClose()
+]]></system-out>
+</testcase>
+<testcase name="updateCourseChangesTheStoredValues()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.034">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:updateCourseChangesTheStoredValues()]
+display-name: updateCourseChangesTheStoredValues()
+]]></system-out>
+</testcase>
+<testcase name="sampleDataIsLoadedOnlyWhenTheDatabaseIsEmpty()" classname="com.studentmanagement.config.DatabaseInitializerTest" time="0.094">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseInitializerTest]/[method:sampleDataIsLoadedOnlyWhenTheDatabaseIsEmpty()]
+display-name: sampleDataIsLoadedOnlyWhenTheDatabaseIsEmpty()
+]]></system-out>
+</testcase>
+<testcase name="enrollmentsCanBeListedByStudentByCourseAndAll()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.059">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:enrollmentsCanBeListedByStudentByCourseAndAll()]
+display-name: enrollmentsCanBeListedByStudentByCourseAndAll()
+]]></system-out>
+</testcase>
+<testcase name="updateStudentValidatesAndPersistsChanges()" classname="com.studentmanagement.service.StudentServiceTest" time="0.069">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:updateStudentValidatesAndPersistsChanges()]
+display-name: updateStudentValidatesAndPersistsChanges()
+]]></system-out>
+</testcase>
+<testcase name="scriptIsSplitOnSemicolonsAndCommentsAreSkipped()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.032">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:scriptIsSplitOnSemicolonsAndCommentsAreSkipped()]
+display-name: scriptIsSplitOnSemicolonsAndCommentsAreSkipped()
+]]></system-out>
+</testcase>
+<testcase name="serverInfoNamesTheDatabaseAndTheDriver()" classname="com.studentmanagement.service.ReportServiceTest" time="0.033">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:serverInfoNamesTheDatabaseAndTheDriver()]
+display-name: serverInfoNamesTheDatabaseAndTheDriver()
+]]></system-out>
+</testcase>
+<testcase name="aCourseWithEnrolledStudentsCannotBeDeleted()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.043">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:aCourseWithEnrolledStudentsCannotBeDeleted()]
+display-name: aCourseWithEnrolledStudentsCannotBeDeleted()
+]]></system-out>
+</testcase>
+<testcase name="batchRefusesToRunOutsideATransaction()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.048">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:batchRefusesToRunOutsideATransaction()]
+display-name: batchRefusesToRunOutsideATransaction()
+]]></system-out>
+</testcase>
+<testcase name="createsAllTablesConstraintsIndexesAndProceduresInAnEmptyDatabase()" classname="com.studentmanagement.config.DatabaseInitializerTest" time="0.098">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseInitializerTest]/[method:createsAllTablesConstraintsIndexesAndProceduresInAnEmptyDatabase()]
+display-name: createsAllTablesConstraintsIndexesAndProceduresInAnEmptyDatabase()
+]]></system-out>
+</testcase>
+<testcase name="parametersCannotBeModifiedFromOutside()" classname="com.studentmanagement.util.QueryBuilderTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:parametersCannotBeModifiedFromOutside()]
+display-name: parametersCannotBeModifiedFromOutside()
+]]></system-out>
+</testcase>
+<testcase name="wrappedConnectionFailuresAreUnwrapped()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:wrappedConnectionFailuresAreUnwrapped()]
+display-name: wrappedConnectionFailuresAreUnwrapped()
+]]></system-out>
+</testcase>
+<testcase name="jdbcUrlIsSplitIntoHostPortAndDatabase()" classname="com.studentmanagement.config.DatabaseConfigTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseConfigTest]/[method:jdbcUrlIsSplitIntoHostPortAndDatabase()]
+display-name: jdbcUrlIsSplitIntoHostPortAndDatabase()
+]]></system-out>
+</testcase>
+<testcase name="enrollmentCountsIncludeCoursesWithoutStudents()" classname="com.studentmanagement.service.ReportServiceTest" time="0.043">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:enrollmentCountsIncludeCoursesWithoutStudents()]
+display-name: enrollmentCountsIncludeCoursesWithoutStudents()
+]]></system-out>
+</testcase>
+<testcase name="whereIfSkipsTheConditionAndItsValues()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:whereIfSkipsTheConditionAndItsValues()]
+display-name: whereIfSkipsTheConditionAndItsValues()
+]]></system-out>
+</testcase>
+<testcase name="searchCombinesDepartmentAndMinimumGpa()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.047">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:searchCombinesDepartmentAndMinimumGpa()]
+display-name: searchCombinesDepartmentAndMinimumGpa()
+]]></system-out>
+</testcase>
+<testcase name="enrollingAnUnknownStudentIsRejectedByTheForeignKey()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.149">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:enrollingAnUnknownStudentIsRejectedByTheForeignKey()]
+display-name: enrollingAnUnknownStudentIsRejectedByTheForeignKey()
+]]></system-out>
+</testcase>
+<testcase name="pooledConnectionIsValidAndPointsToTheTestDatabase()" classname="com.studentmanagement.config.DatabaseConfigTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseConfigTest]/[method:pooledConnectionIsValidAndPointsToTheTestDatabase()]
+display-name: pooledConnectionIsValidAndPointsToTheTestDatabase()
+]]></system-out>
+</testcase>
+<testcase name="delimitersInsideQuotesAreNotStatementEnds()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.034">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:delimitersInsideQuotesAreNotStatementEnds()]
+display-name: delimitersInsideQuotesAreNotStatementEnds()
+]]></system-out>
+</testcase>
+<testcase name="missingGpaIsStoredAsSqlNull()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.031">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:missingGpaIsStoredAsSqlNull()]
+display-name: missingGpaIsStoredAsSqlNull()
+]]></system-out>
+</testcase>
+<testcase name="batchIsRolledBackCompletelyWhenOneRowFails()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.082">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:batchIsRolledBackCompletelyWhenOneRowFails()]
+display-name: batchIsRolledBackCompletelyWhenOneRowFails()
+]]></system-out>
+</testcase>
+<testcase name="databaseErrorsAreExplainedAndTheMenuKeepsRunning()" classname="com.studentmanagement.MainMenuTest" time="0.055">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.MainMenuTest]/[method:databaseErrorsAreExplainedAndTheMenuKeepsRunning()]
+display-name: databaseErrorsAreExplainedAndTheMenuKeepsRunning()
+]]></system-out>
+</testcase>
+<testcase name="userInputNeverBecomesPartOfTheSqlText()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:userInputNeverBecomesPartOfTheSqlText()]
+display-name: userInputNeverBecomesPartOfTheSqlText()
+]]></system-out>
+</testcase>
+<testcase name="allValidationProblemsAreReportedTogether()" classname="com.studentmanagement.service.StudentServiceTest" time="0.037">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:allValidationProblemsAreReportedTogether()]
+display-name: allValidationProblemsAreReportedTogether()
+]]></system-out>
+</testcase>
+<testcase name="runningTheInitializationAgainKeepsExistingData()" classname="com.studentmanagement.config.DatabaseInitializerTest" time="0.072">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseInitializerTest]/[method:runningTheInitializationAgainKeepsExistingData()]
+display-name: runningTheInitializationAgainKeepsExistingData()
+]]></system-out>
+</testcase>
+<testcase name="registerWithCoursesRollsBackTheInsertedStudentWhenACourseIsUnknown()" classname="com.studentmanagement.service.StudentServiceTest" time="0.054">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:registerWithCoursesRollsBackTheInsertedStudentWhenACourseIsUnknown()]
+display-name: registerWithCoursesRollsBackTheInsertedStudentWhenACourseIsUnknown()
+]]></system-out>
+</testcase>
+<testcase name="statisticsReportContainsEverySection()" classname="com.studentmanagement.service.ReportServiceTest" time="0.069">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:statisticsReportContainsEverySection()]
+display-name: statisticsReportContainsEverySection()
+]]></system-out>
+</testcase>
+<testcase name="batchInsideATransactionIsCommittedByTheCaller()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.052">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:batchInsideATransactionIsCommittedByTheCaller()]
+display-name: batchInsideATransactionIsCommittedByTheCaller()
+]]></system-out>
+</testcase>
+<testcase name="everyMenuOptionWorksEndToEnd()" classname="com.studentmanagement.MainMenuTest" time="0.149">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.MainMenuTest]/[method:everyMenuOptionWorksEndToEnd()]
+display-name: everyMenuOptionWorksEndToEnd()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[3]" classname="com.studentmanagement.service.StudentServiceTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#3]
+display-name: [3] rejected with "Last name is required"
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[4]" classname="com.studentmanagement.service.StudentServiceTest" time="0.035">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#4]
+display-name: [4] rejected with "not a valid e-mail"
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[1]" classname="com.studentmanagement.service.StudentServiceTest" time="0.059">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#1]
+display-name: [1] rejected with "First name is required"
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[2]" classname="com.studentmanagement.service.StudentServiceTest" time="0.04">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#2]
+display-name: [2] rejected with "may only contain letters"
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[7]" classname="com.studentmanagement.service.StudentServiceTest" time="0.05">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#7]
+display-name: [7] rejected with "Department is required"
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[8]" classname="com.studentmanagement.service.StudentServiceTest" time="0.041">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#8]
+display-name: [8] rejected with "at most 50"
+]]></system-out>
+</testcase>
+<testcase name="averageGpaIsNullForAnEmptyDatabase()" classname="com.studentmanagement.service.ReportServiceTest" time="0.031">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:averageGpaIsNullForAnEmptyDatabase()]
+display-name: averageGpaIsNullForAnEmptyDatabase()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[5]" classname="com.studentmanagement.service.StudentServiceTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#5]
+display-name: [5] rejected with "Date of birth is required"
+]]></system-out>
+</testcase>
+<testcase name="batchEnrollmentIsAllOrNothing()" classname="com.studentmanagement.service.StudentServiceTest" time="0.051">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:batchEnrollmentIsAllOrNothing()]
+display-name: batchEnrollmentIsAllOrNothing()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[6]" classname="com.studentmanagement.service.StudentServiceTest" time="0.039">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#6]
+display-name: [6] rejected with "Date of birth must be in the past"
+]]></system-out>
+</testcase>
+<testcase name="connectionPoolStatusComesFromDbcp2()" classname="com.studentmanagement.service.ReportServiceTest" time="0.025">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:connectionPoolStatusComesFromDbcp2()]
+display-name: connectionPoolStatusComesFromDbcp2()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedWithHelpfulMessagesAndNothingIsSaved()" classname="com.studentmanagement.MainMenuTest" time="0.05">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.MainMenuTest]/[method:invalidInputIsRejectedWithHelpfulMessagesAndNothingIsSaved()]
+display-name: invalidInputIsRejectedWithHelpfulMessagesAndNothingIsSaved()
+]]></system-out>
+</testcase>
+<testcase name="addStudentStoresEveryFieldAndReturnsTheGeneratedId()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.038">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:addStudentStoresEveryFieldAndReturnsTheGeneratedId()]
+display-name: addStudentStoresEveryFieldAndReturnsTheGeneratedId()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[9]" classname="com.studentmanagement.service.StudentServiceTest" time="0.04">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#9]
+display-name: [9] rejected with "GPA must be between 0.00 and 4.00"
+]]></system-out>
+</testcase>
+<testcase name="csvImportIsRolledBackWhenTheDatabaseRejectsARow()" classname="com.studentmanagement.service.StudentServiceTest" time="0.055">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:csvImportIsRolledBackWhenTheDatabaseRejectsARow()]
+display-name: csvImportIsRolledBackWhenTheDatabaseRejectsARow()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[12]" classname="com.studentmanagement.service.StudentServiceTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#12]
+display-name: [12] rejected with "Enrollment date must be after the date of birth"
+]]></system-out>
+</testcase>
+<testcase name="csvImportInsertsEveryRowOfTheSampleFile()" classname="com.studentmanagement.service.StudentServiceTest" time="0.05">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:csvImportInsertsEveryRowOfTheSampleFile()]
+display-name: csvImportInsertsEveryRowOfTheSampleFile()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[11]" classname="com.studentmanagement.service.StudentServiceTest" time="0.047">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#11]
+display-name: [11] rejected with "at most 2 decimal places"
+]]></system-out>
+</testcase>
+<testcase name="containsPatternEscapesLikeWildcards()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:containsPatternEscapesLikeWildcards()]
+display-name: containsPatternEscapesLikeWildcards()
+]]></system-out>
+</testcase>
+<testcase name="batchInsertIsFasterThanRowByRowInserts()" classname="com.studentmanagement.dao.BatchPerformanceTest" time="1.249">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.BatchPerformanceTest]/[method:batchInsertIsFasterThanRowByRowInserts()]
+display-name: batchInsertIsFasterThanRowByRowInserts()
+]]></system-out>
+</testcase>
+<testcase name="invalidInputIsRejectedBeforeAnySqlIsExecuted(Student, String)[10]" classname="com.studentmanagement.service.StudentServiceTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[test-template:invalidInputIsRejectedBeforeAnySqlIsExecuted(com.studentmanagement.model.Student, java.lang.String)]/[test-template-invocation:#10]
+display-name: [10] rejected with "GPA must be between 0.00 and 4.00"
+]]></system-out>
+</testcase>
+<testcase name="delimiterLinesKeepStoredProcedureBodiesTogether()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.037">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:delimiterLinesKeepStoredProcedureBodiesTogether()]
+display-name: delimiterLinesKeepStoredProcedureBodiesTogether()
+]]></system-out>
+</testcase>
+<testcase name="buildsASelectWithoutConditions()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:buildsASelectWithoutConditions()]
+display-name: buildsASelectWithoutConditions()
+]]></system-out>
+</testcase>
+<testcase name="csvImportRequiresTheHeaderLine()" classname="com.studentmanagement.service.StudentServiceTest" time="0.04">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:csvImportRequiresTheHeaderLine()]
+display-name: csvImportRequiresTheHeaderLine()
+]]></system-out>
+</testcase>
+<testcase name="unterminatedQuotesAreReported()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.037">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:unterminatedQuotesAreReported()]
+display-name: unterminatedQuotesAreReported()
+]]></system-out>
+</testcase>
+<testcase name="addEnrollmentAndReadItBackByCompositeKey()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.053">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:addEnrollmentAndReadItBackByCompositeKey()]
+display-name: addEnrollmentAndReadItBackByCompositeKey()
+]]></system-out>
+</testcase>
+<testcase name="placeholderAndValueCountsMustMatch()" classname="com.studentmanagement.util.QueryBuilderTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:placeholderAndValueCountsMustMatch()]
+display-name: placeholderAndValueCountsMustMatch()
+]]></system-out>
+</testcase>
+<testcase name="registerWithCoursesCommitsTheStudentAndAllEnrollmentsTogether()" classname="com.studentmanagement.service.StudentServiceTest" time="0.045">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:registerWithCoursesCommitsTheStudentAndAllEnrollmentsTogether()]
+display-name: registerWithCoursesCommitsTheStudentAndAllEnrollmentsTogether()
+]]></system-out>
+</testcase>
+<testcase name="batchInsertStoresAllRowsAndAssignsTheirIds()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.063">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:batchInsertStoresAllRowsAndAssignsTheirIds()]
+display-name: batchInsertStoresAllRowsAndAssignsTheirIds()
+]]></system-out>
+</testcase>
+<testcase name="conditionsCannotContainStatementSeparatorsOrComments()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:conditionsCannotContainStatementSeparatorsOrComments()]
+display-name: conditionsCannotContainStatementSeparatorsOrComments()
+]]></system-out>
+</testcase>
+<testcase name="transactionIsRolledBackWhenAStatementFails()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.043">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:transactionIsRolledBackWhenAStatementFails()]
+display-name: transactionIsRolledBackWhenAStatementFails()
+]]></system-out>
+</testcase>
+<testcase name="updateEnrollmentRecordsTheGrade()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.051">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:updateEnrollmentRecordsTheGrade()]
+display-name: updateEnrollmentRecordsTheGrade()
+]]></system-out>
+</testcase>
+<testcase name="deleteEnrollmentRemovesOnlyThatEnrollment()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.07">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:deleteEnrollmentRemovesOnlyThatEnrollment()]
+display-name: deleteEnrollmentRemovesOnlyThatEnrollment()
+]]></system-out>
+</testcase>
+<testcase name="duplicateCourseCodeIsRejected()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.046">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:duplicateCourseCodeIsRejected()]
+display-name: duplicateCourseCodeIsRejected()
+]]></system-out>
+</testcase>
+<testcase name="anInvalidGradeIsRejectedByTheCheckConstraint()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.047">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:anInvalidGradeIsRejectedByTheCheckConstraint()]
+display-name: anInvalidGradeIsRejectedByTheCheckConstraint()
+]]></system-out>
+</testcase>
+<testcase name="backupThenTotalLossThenRestoreRecoversDataAndProcedures()" classname="com.studentmanagement.util.BackupRecoveryTest" time="0.269">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.BackupRecoveryTest]/[method:backupThenTotalLossThenRestoreRecoversDataAndProcedures()]
+display-name: backupThenTotalLossThenRestoreRecoversDataAndProcedures()
+]]></system-out>
+</testcase>
+<testcase name="searchMatchesPartOfFirstNameLastNameFullNameOrEmail()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.043">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:searchMatchesPartOfFirstNameLastNameFullNameOrEmail()]
+display-name: searchMatchesPartOfFirstNameLastNameFullNameOrEmail()
+]]></system-out>
+</testcase>
+<testcase name="duplicateEmailIsRejectedByTheUniqueConstraint()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.03">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:duplicateEmailIsRejectedByTheUniqueConstraint()]
+display-name: duplicateEmailIsRejectedByTheUniqueConstraint()
+]]></system-out>
+</testcase>
+<testcase name="storedProcedureReturnsTheStudentsOfOneDepartmentOrderedByName()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.045">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:storedProcedureReturnsTheStudentsOfOneDepartmentOrderedByName()]
+display-name: storedProcedureReturnsTheStudentsOfOneDepartmentOrderedByName()
+]]></system-out>
+</testcase>
+<testcase name="indexDefinitionsAreReadFromInformationSchema()" classname="com.studentmanagement.service.ReportServiceTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:indexDefinitionsAreReadFromInformationSchema()]
+display-name: indexDefinitionsAreReadFromInformationSchema()
+]]></system-out>
+</testcase>
+<testcase name="batchEnrollmentCommitsAllEnrollments()" classname="com.studentmanagement.service.StudentServiceTest" time="0.061">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:batchEnrollmentCommitsAllEnrollments()]
+display-name: batchEnrollmentCommitsAllEnrollments()
+]]></system-out>
+</testcase>
+<testcase name="combinesConditionsWithAndAndKeepsParameterOrder()" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[method:combinesConditionsWithAndAndKeepsParameterOrder()]
+display-name: combinesConditionsWithAndAndKeepsParameterOrder()
+]]></system-out>
+</testcase>
+<testcase name="getAllDepartmentsReturnsDistinctNamesAlphabetically()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:getAllDepartmentsReturnsDistinctNamesAlphabetically()]
+display-name: getAllDepartmentsReturnsDistinctNamesAlphabetically()
+]]></system-out>
+</testcase>
+<testcase name="theProjectScriptsParseIntoTheExpectedStatements()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.039">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:theProjectScriptsParseIntoTheExpectedStatements()]
+display-name: theProjectScriptsParseIntoTheExpectedStatements()
+]]></system-out>
+</testcase>
+<testcase name="addCourseStoresEveryFieldAndReturnsTheGeneratedId()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.035">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:addCourseStoresEveryFieldAndReturnsTheGeneratedId()]
+display-name: addCourseStoresEveryFieldAndReturnsTheGeneratedId()
+]]></system-out>
+</testcase>
+<testcase name="getAllCoursesIsOrderedByCode()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.046">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:getAllCoursesIsOrderedByCode()]
+display-name: getAllCoursesIsOrderedByCode()
+]]></system-out>
+</testcase>
+<testcase name="checkConstraintRejectsAGpaAboveFour()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.047">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:checkConstraintRejectsAGpaAboveFour()]
+display-name: checkConstraintRejectsAGpaAboveFour()
+]]></system-out>
+</testcase>
+<testcase name="enrollingTwiceInTheSameCourseIsRejectedByThePrimaryKey()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.08">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:enrollingTwiceInTheSameCourseIsRejectedByThePrimaryKey()]
+display-name: enrollingTwiceInTheSameCourseIsRejectedByThePrimaryKey()
+]]></system-out>
+</testcase>
+<testcase name="getStudentByIdReturnsEmptyForAnUnknownId()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:getStudentByIdReturnsEmptyForAnUnknownId()]
+display-name: getStudentByIdReturnsEmptyForAnUnknownId()
+]]></system-out>
+</testcase>
+<testcase name="deletingAStudentDeletesTheirEnrollments()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.928">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:deletingAStudentDeletesTheirEnrollments()]
+display-name: deletingAStudentDeletesTheirEnrollments()
+]]></system-out>
+</testcase>
+<testcase name="deleteCourseRemovesTheRow()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:deleteCourseRemovesTheRow()]
+display-name: deleteCourseRemovesTheRow()
+]]></system-out>
+</testcase>
+<testcase name="registerWithCoursesFailsAtomicallyOnADuplicateEmail()" classname="com.studentmanagement.service.StudentServiceTest" time="0.045">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:registerWithCoursesFailsAtomicallyOnADuplicateEmail()]
+display-name: registerWithCoursesFailsAtomicallyOnADuplicateEmail()
+]]></system-out>
+</testcase>
+<testcase name="updateStudentChangesTheStoredValues()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:updateStudentChangesTheStoredValues()]
+display-name: updateStudentChangesTheStoredValues()
+]]></system-out>
+</testcase>
+<testcase name="updateReturnsFalseWhenTheStudentDoesNotExist()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.033">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:updateReturnsFalseWhenTheStudentDoesNotExist()]
+display-name: updateReturnsFalseWhenTheStudentDoesNotExist()
+]]></system-out>
+</testcase>
+<testcase name="aFailingBatchRollsBackEverythingAlreadyDoneInTheTransaction()" classname="com.studentmanagement.dao.EnrollmentDAOTest" time="0.055">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.EnrollmentDAOTest]/[method:aFailingBatchRollsBackEverythingAlreadyDoneInTheTransaction()]
+display-name: aFailingBatchRollsBackEverythingAlreadyDoneInTheTransaction()
+]]></system-out>
+</testcase>
+<testcase name="csvImportRejectsInvalidRowsBeforeTouchingTheDatabase()" classname="com.studentmanagement.service.StudentServiceTest" time="0.047">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:csvImportRejectsInvalidRowsBeforeTouchingTheDatabase()]
+display-name: csvImportRejectsInvalidRowsBeforeTouchingTheDatabase()
+]]></system-out>
+</testcase>
+<testcase name="departmentLookupUsesTheCompositeIndex()" classname="com.studentmanagement.service.ReportServiceTest" time="0.092">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:departmentLookupUsesTheCompositeIndex()]
+display-name: departmentLookupUsesTheCompositeIndex()
+]]></system-out>
+</testcase>
+<testcase name="deleteStudentRemovesTheRow()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.045">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:deleteStudentRemovesTheRow()]
+display-name: deleteStudentRemovesTheRow()
+]]></system-out>
+</testcase>
+<testcase name="updateKeepsValuesWhenEnterIsPressed()" classname="com.studentmanagement.MainMenuTest" time="0.052">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.MainMenuTest]/[method:updateKeepsValuesWhenEnterIsPressed()]
+display-name: updateKeepsValuesWhenEnterIsPressed()
+]]></system-out>
+</testcase>
+<testcase name="largeBatchesAreSentInChunksAndStillCommitTogether()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.133">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:largeBatchesAreSentInChunksAndStillCommitTogether()]
+display-name: largeBatchesAreSentInChunksAndStillCommitTogether()
+]]></system-out>
+</testcase>
+<testcase name="courseCanBeFoundByCodeIgnoringCase()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.038">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:courseCanBeFoundByCodeIgnoringCase()]
+display-name: courseCanBeFoundByCodeIgnoringCase()
+]]></system-out>
+</testcase>
+<testcase name="mySqlErrorCodesAreTranslatedIntoFriendlyMessages()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.041">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:mySqlErrorCodesAreTranslatedIntoFriendlyMessages()]
+display-name: mySqlErrorCodesAreTranslatedIntoFriendlyMessages()
+]]></system-out>
+</testcase>
+<testcase name="creditsOutsideOneToTenAreRejectedByTheCheckConstraint()" classname="com.studentmanagement.dao.CourseDAOTest" time="0.033">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.CourseDAOTest]/[method:creditsOutsideOneToTenAreRejectedByTheCheckConstraint()]
+display-name: creditsOutsideOneToTenAreRejectedByTheCheckConstraint()
+]]></system-out>
+</testcase>
+<testcase name="searchTreatsWildcardsAndSqlInjectionAttemptsAsPlainText()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.048">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:searchTreatsWildcardsAndSqlInjectionAttemptsAsPlainText()]
+display-name: searchTreatsWildcardsAndSqlInjectionAttemptsAsPlainText()
+]]></system-out>
+</testcase>
+<testcase name="transactionIsCommittedWhenTheWorkSucceeds()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.039">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:transactionIsCommittedWhenTheWorkSucceeds()]
+display-name: transactionIsCommittedWhenTheWorkSucceeds()
+]]></system-out>
+</testcase>
+<testcase name="studentsAreCountedAndAveragedPerDepartment()" classname="com.studentmanagement.service.ReportServiceTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:studentsAreCountedAndAveragedPerDepartment()]
+display-name: studentsAreCountedAndAveragedPerDepartment()
+]]></system-out>
+</testcase>
+<testcase name="getAllStudentsReturnsEveryStudentOrderedById()" classname="com.studentmanagement.dao.StudentDAOTest" time="0.044">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.dao.StudentDAOTest]/[method:getAllStudentsReturnsEveryStudentOrderedById()]
+display-name: getAllStudentsReturnsEveryStudentOrderedById()
+]]></system-out>
+</testcase>
+<testcase name="totalsAreReadFromTheStoredProcedureOutParameters()" classname="com.studentmanagement.service.ReportServiceTest" time="0.054">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.ReportServiceTest]/[method:totalsAreReadFromTheStoredProcedureOutParameters()]
+display-name: totalsAreReadFromTheStoredProcedureOutParameters()
+]]></system-out>
+</testcase>
+<testcase name="restoreReportsMySqlErrorsAndKeepsCurrentData()" classname="com.studentmanagement.util.BackupRecoveryTest" time="0.076">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.BackupRecoveryTest]/[method:restoreReportsMySqlErrorsAndKeepsCurrentData()]
+display-name: restoreReportsMySqlErrorsAndKeepsCurrentData()
+]]></system-out>
+</testcase>
+<testcase name="searchNeedsAtLeastOneCriterionAndAValidGpa()" classname="com.studentmanagement.service.StudentServiceTest" time="0.044">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:searchNeedsAtLeastOneCriterionAndAValidGpa()]
+display-name: searchNeedsAtLeastOneCriterionAndAValidGpa()
+]]></system-out>
+</testcase>
+<testcase name="autoCommitIsRestoredBeforeTheConnectionGoesBackToThePool()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.038">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:autoCommitIsRestoredBeforeTheConnectionGoesBackToThePool()]
+display-name: autoCommitIsRestoredBeforeTheConnectionGoesBackToThePool()
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[6]" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#6]
+display-name: [6] 
+]]></system-out>
+</testcase>
+<testcase name="addStudentNormalisesInputAndReturnsTheStoredRecord()" classname="com.studentmanagement.service.StudentServiceTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.service.StudentServiceTest]/[method:addStudentNormalisesInputAndReturnsTheStoredRecord()]
+display-name: addStudentNormalisesInputAndReturnsTheStoredRecord()
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[5]" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#5]
+display-name: [5] 1abc
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[2]" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#2]
+display-name: [2] first name
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[1]" classname="com.studentmanagement.util.QueryBuilderTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#1]
+display-name: [1] students; DROP TABLE x
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[4]" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#4]
+display-name: [4] `id`
+]]></system-out>
+</testcase>
+<testcase name="identifiersMustBePlainNames(String)[3]" classname="com.studentmanagement.util.QueryBuilderTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.QueryBuilderTest]/[test-template:identifiersMustBePlainNames(java.lang.String)]/[test-template-invocation:#3]
+display-name: [3] id--
+]]></system-out>
+</testcase>
+<testcase name="poolIsConfiguredFromThePropertiesFile()" classname="com.studentmanagement.config.DatabaseConfigTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseConfigTest]/[method:poolIsConfiguredFromThePropertiesFile()]
+display-name: poolIsConfiguredFromThePropertiesFile()
+]]></system-out>
+</testcase>
+<testcase name="transactionIsRolledBackOnARuntimeException()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.048">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:transactionIsRolledBackOnARuntimeException()]
+display-name: transactionIsRolledBackOnARuntimeException()
+]]></system-out>
+</testcase>
+<testcase name="closingAConnectionReturnsItToThePool()" classname="com.studentmanagement.config.DatabaseConfigTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.config.DatabaseConfigTest]/[method:closingAConnectionReturnsItToThePool()]
+display-name: closingAConnectionReturnsItToThePool()
+]]></system-out>
+</testcase>
+<testcase name="setParametersBindsValuesAndNullsInOrder()" classname="com.studentmanagement.util.DatabaseUtilsTest" time="0.036">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.studentmanagement.util.DatabaseUtilsTest]/[method:setParametersBindsValuesAndNullsInOrder()]
+display-name: setParametersBindsValuesAndNullsInOrder()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

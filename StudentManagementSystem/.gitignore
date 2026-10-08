@@ -1,0 +1,14 @@
+# Build output (run.sh / run-tests.sh recreate it)
+out/
+
+# Runtime files
+logs/
+backups/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/

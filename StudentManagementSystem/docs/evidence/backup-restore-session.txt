@@ -1,0 +1,76 @@
+# Backup and recovery: --backup, simulated loss of all tables and procedures, --restore
+# Captured: 2026-10-08 20:14 UTC | OS: Ubuntu 24.04.5 LTS | Java: openjdk version "21.0.12.1" 2026-08-18 | MySQL server: 8.0.46-0ubuntu0.24.04.4
+# Driver: lib/mysql-connector-j-9.7.0.jar | Pool: lib/commons-dbcp2-2.10.0.jar | Time zones: JVM Asia/Calcutta (UTC+05:30, used in file names and logs), MySQL server UTC
+# This file is unedited program output.
+
+# mysql CLI calls below authenticate as sms_user (password from the MYSQL_PWD environment variable).
+
+$ mysql -u sms_user student_management -e "SELECT COUNT(*) AS students FROM students; SELECT COUNT(*) AS enrollments FROM student_courses"
+students
+18
+enrollments
+19
+
+$ ./run.sh --backup
+Creating backup of database 'student_management' with mysqldump ...
+[OK] Backup created: backups/student_management_20261009_014449_342.sql (11,629 bytes) - tables, data and stored procedures
+
+$ head -n 25 backups/student_management_20261009_014449_342.sql
+-- MySQL dump 10.13  Distrib 8.0.46, for Linux (x86_64)
+--
+-- Host: localhost    Database: student_management
+-- ------------------------------------------------------
+-- Server version	8.0.46-0ubuntu0.24.04.4
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `student_management`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `student_management` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `student_management`;
+
+...
+$ grep -c 'INSERT INTO' backups/student_management_20261009_014449_342.sql ; grep -E 'CREATE DEFINER.*PROCEDURE' backups/student_management_20261009_014449_342.sql
+3
+CREATE DEFINER=`sms_user`@`localhost` PROCEDURE `GetDatabaseStatistics`(
+CREATE DEFINER=`sms_user`@`localhost` PROCEDURE `GetStudentsByDepartment`(IN p_department VARCHAR(50))
+
+# --- simulated disaster: every table and both stored procedures are dropped ---
+$ mysql -u sms_user student_management -e "DROP TABLE student_courses, students, courses; DROP PROCEDURE GetStudentsByDepartment; DROP PROCEDURE GetDatabaseStatistics; SHOW TABLES;"
+(no tables left)
+
+$ ./run.sh --restore backups/student_management_20261009_014449_342.sql   (answering YES)
+WARNING: this replaces all tables, data and stored procedures of database 'student_management' with the contents of backups/student_management_20261009_014449_342.sql
+Type YES to continue: YES
+[OK] Database restored from backups/student_management_20261009_014449_342.sql - now 18 students, 6 courses, 19 enrollments
+
+$ mysql -u sms_user student_management -e "SHOW TABLES; SELECT ROUTINE_NAME FROM information_schema.routines WHERE routine_schema = DATABASE(); CALL GetStudentsByDepartment(\"Physics\");"
+Tables_in_student_management
+courses
+student_courses
+students
+ROUTINE_NAME
+GetDatabaseStatistics
+GetStudentsByDepartment
+id	first_name	last_name	email	date_of_birth	department	gpa	enrollment_date	created_at	updated_at
+16	Kabir	Chopra	kabir.chopra@example.com	2003-10-09	Physics	3.12	2022-08-01	2026-10-08 20:14:47	2026-10-08 20:14:47
+20	Aryan	Desai	aryan.desai@example.com	2003-12-11	Physics	3.74	2022-08-01	2026-10-08 20:14:47	2026-10-08 20:14:47
+8	Kavya	Gupta	kavya.gupta@example.com	2003-12-02	Physics	3.55	2021-08-02	2026-10-08 20:14:46	2026-10-08 20:14:46
+4	Ananya	Iyer	ananya.iyer@example.com	2004-01-30	Physics	3.65	2022-08-01	2026-10-08 20:14:46	2026-10-08 20:14:46
+
+$ ./run.sh --restore   (no file given)
+Usage: --restore <backup-file.sql>
+Available backups:
+  backups/student_management_20261009_014449_342.sql

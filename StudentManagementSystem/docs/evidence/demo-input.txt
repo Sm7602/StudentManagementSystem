@@ -1,0 +1,72 @@
+1
+y
+3
+2
+Ishita
+Sen
+ishita.sen@
+Ishita.Sen@Example.com
+14-09-2004
+2004-09-14
+Computer Science
+3.65
+2023-08-01
+CS101, CS201
+4
+1
+11
+4
+2
+patel
+
+
+4
+2
+
+computer science
+3.50
+5
+11
+
+
+
+
+Mathematics
+3.72
+
+2
+Rahul
+Kumar
+rahul.kumar@example.com
+2003-02-11
+Physics
+
+
+PH101, XX999
+2
+Aarav
+Sharma
+aarav.sharma@example.com
+2003-04-12
+Computer Science
+3.75
+2021-08-02
+
+6
+11
+y
+7
+1
+
+7
+1
+
+7
+2
+CS301
+14, 15, 16
+8
+Mathematics
+9
+abc
+10
